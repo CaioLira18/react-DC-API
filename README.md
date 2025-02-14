@@ -61,8 +61,9 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ### Homepage
 ![Homepage](/photos/1.png)
 
-### Heroes Section
-![Heroes Section](https://link-da-imagem.com/heroes.png)
+### Notice Section
+![Homepage](/photos/2.png)
+![Homepage](/photos/3.png)
 
 ### Games Section
 ![Games Section](https://link-da-imagem.com/games.png)
