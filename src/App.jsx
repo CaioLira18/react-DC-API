@@ -10,6 +10,8 @@ import LeiaMais from './components/LeiaMais';
 import Noticias from './pages/Noticias'; // Corrigido
 import Noticia from './pages/Noticia';
 import Jogo from './pages/Jogo';
+import Villans from './pages/Villans';
+import Villian from './pages/Villian';
 
 const App = () => {
   const location = useLocation(); // Pegando a rota atual
@@ -25,6 +27,8 @@ const App = () => {
         <Route path="/Jogos/:id" element={<Jogo />} />
         <Route path="/Noticias" element={<Noticias />} />
         <Route path="/Noticias/:id" element={<Noticia />} />
+        <Route path="/Viloes" element={<Villans />} />
+        <Route path="/Viloes/:id" element={<Villian />} />
       </Routes>
 
       {/* Exibir LeiaMais apenas na página de Notícias */}

@@ -5,6 +5,8 @@ import ItemListNoticias from "./ItemListNoticias";
 import { heroesArray } from "../assets/database/heroes";
 import { jogosArray } from "../assets/database/games";
 import { newsArray } from "../assets/database/news";
+import { villainsArray } from "../assets/database/villains";
+
 
 const Main = ({ type }) => {
     return (
@@ -17,6 +19,16 @@ const Main = ({ type }) => {
                     itemsArray={heroesArray} 
                     path='/hero' 
                     idPath="/Herois"
+                />
+            ) : <></>}
+            {/* Item List de Vilões */}
+            {type === "viloes" || type === undefined ? (
+                <ItemList 
+                    title="Viloes" 
+                    items={villainsArray.length} 
+                    itemsArray={villainsArray} 
+                    path='/viloes' 
+                    idPath="/Viloes"
                 />
             ) : <></>}
 
