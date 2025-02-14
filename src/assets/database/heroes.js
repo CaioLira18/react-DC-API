@@ -12,7 +12,7 @@ export const heroesArray = [
     cidade: "Gotham City",
     identidade: "Batman",
     bio: "Bruce Wayne, após testemunhar o assassinato de seus pais, treinou intensamente e se tornou Batman, um justiceiro mascarado de Gotham City que, sem superpoderes, usa inteligência, artes marciais e tecnologia para combater vilões icônicos como o Coringa, protegendo sua cidade com estratégia e determinação.",
-    foto: "/src/assets/imagens_herois/Batman.png",
+    foto: "/imagens_herois/Batman.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const heroesArray = [
     cidade: "Metrópolis",
     identidade: "Superman",
     bio: "Último filho de Krypton, Kal-El foi enviado à Terra e criado como Clark Kent. Com poderes sobre-humanos concedidos pelo Sol amarelo, tornou-se Superman, o símbolo da esperança e protetor de Metrópolis.",
-    foto: "/src/assets/imagens_herois/Superman.png",
+    foto: "/imagens_herois/Superman.png",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ export const heroesArray = [
     cidade: "Themyscira",
     identidade: "Mulher Maravilha",
     bio: "Princesa das Amazonas e filha de Hipólita, Diana foi treinada como guerreira e enviada ao mundo dos humanos para ser um símbolo de paz e justiça, empunhando o Laço da Verdade e os Braceletes Indestrutíveis.",
-    foto: "/src/assets/imagens_herois/MulherMaravilha.png",
+    foto: "/imagens_herois/MulherMaravilha.png",
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ export const heroesArray = [
     cidade: "Atlântida",
     identidade: "Aquaman",
     bio: "Filho de Atlanna, rainha de Atlântida, e de um humano, Arthur Curry possui habilidades aquáticas e superforça. Como rei dos mares, luta para proteger os oceanos e a superfície.",
-    foto: "/src/assets/imagens_herois/Aquaman.png",
+    foto: "/imagens_herois/Aquaman.png",
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ export const heroesArray = [
     cidade: "Metrópolis",
     identidade: "Supergirl",
     bio: "Prima de Superman, Kara Zor-El escapou da destruição de Krypton e chegou à Terra, onde usa seus poderes para proteger o planeta ao lado de seu primo, simbolizando coragem e determinação.",
-    foto: "/src/assets/imagens_herois/Supergirl.png",
+    foto: "/imagens_herois/Supergirl.png",
   },
   {
     id: 6,
@@ -72,7 +72,7 @@ export const heroesArray = [
     cidade: "Tamaran",
     identidade: "Estelar",
     bio: "Princesa alienígena de Tamaran, Estelar possui força sobre-humana, capacidade de voo e projeta rajadas de energia, sendo uma heroína poderosa e membro dos Jovens Titãs.",
-    foto: "/src/assets/imagens_herois/Estelar.png",
+    foto: "/imagens_herois/Estelar.png",
   },
   {
     id: 7,
@@ -84,7 +84,7 @@ export const heroesArray = [
     cidade: "Gotham City",
     identidade: "Robin",
     bio: "Dick Grayson, ex-acrobata de circo, foi adotado por Bruce Wayne e treinado para ser Robin, o primeiro parceiro do Batman, tornando-se depois o herói Asa Noturna.",
-    foto: "/src/assets/imagens_herois/Robin.png",
+    foto: "/imagens_herois/Robin.png",
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export const heroesArray = [
     cidade: "Jump City",
     identidade: "Ravena",
     bio: "Rachel Roth, conhecida como Ravena, é uma empata e maga com poderes místicos, filha do demônio Trigon. Ela é membro dos Jovens Titãs e luta para conter sua herança demoníaca.",
-    foto: "/src/assets/imagens_herois/Ravena.png",
+    foto: "/imagens_herois/Ravena.png",
   },
   {
     id: 9,
@@ -108,7 +108,7 @@ export const heroesArray = [
     cidade: "Jump City",
     identidade: "Mutano",
     bio: "Garfield Logan, ou Mutano, adquiriu a habilidade de se transformar em qualquer animal após um acidente envolvendo um soro experimental. Ele é um membro essencial dos Jovens Titãs e conhecido por seu bom humor.",
-    foto: "/src/assets/imagens_herois/Mutano.png",
+    foto: "/imagens_herois/Mutano.png",
   },
   {
     id: 10,
@@ -120,7 +120,7 @@ export const heroesArray = [
     cidade: "Central City",
     identidade: "Flash",
     bio: "Barry Allen, um cientista forense, ganhou supervelocidade após um acidente no laboratório envolvendo produtos químicos e um raio. Ele se tornou o Flash, o homem mais rápido do mundo e protetor de Central City.",
-    foto: "/src/assets/imagens_herois/Flash.png",
+    foto: "/imagens_herois/Flash.png",
   }
 ];
 
