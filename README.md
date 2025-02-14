@@ -59,7 +59,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](https://link-da-imagem.com/homepage.png)
+![Homepage](/photos/1.png)
 
 ### Heroes Section
 ![Heroes Section](https://link-da-imagem.com/heroes.png)
