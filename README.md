@@ -41,15 +41,6 @@ To run the project locally, follow these steps:
 
 The page will be available at `http://localhost:3000/`.
 
-## 💡 Contribution
-Feel free to contribute with improvements and new features. To do so:
-
-1. Fork the repository
-2. Create a branch for your feature (`git checkout -b my-feature`)
-3. Commit your changes (`git commit -m 'Adding new feature'`)
-4. Push the branch (`git push origin my-feature`)
-5. Open a Pull Request
-
 ## ⭐ Acknowledgments
 This project was inspired by the love for the DC Comics universe and developed to share information with other fans.
 
