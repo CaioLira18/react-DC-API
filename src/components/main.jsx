@@ -9,7 +9,7 @@ import { newsArray } from "../assets/database/news";
 const Main = ({ type }) => {
     return (
         <div className="main">
-            {/* Item List de Heróis */}
+            {/* Item List de Heróis  */}
             {type === "Heróis" || type === undefined ? (
                 <ItemList 
                     title="Heróis" 
