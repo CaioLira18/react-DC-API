@@ -56,6 +56,16 @@ This project was inspired by the love for the DC Comics universe and developed t
 ## © License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
----
+## 📸 Screenshots
+
+### Homepage
+![Homepage](https://link-da-imagem.com/homepage.png)
+
+### Heroes Section
+![Heroes Section](https://link-da-imagem.com/heroes.png)
+
+### Games Section
+![Games Section](https://link-da-imagem.com/games.png)
+
 
 
