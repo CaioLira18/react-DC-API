@@ -12,6 +12,8 @@ import Noticia from './pages/Noticia';
 import Jogo from './pages/Jogo';
 import Villans from './pages/Villans';
 import Villian from './pages/Villian';
+import HQ from './pages/HQ';
+import HQs from './pages/HQs';
 
 const App = () => {
   const location = useLocation(); // Pegando a rota atual
@@ -29,6 +31,8 @@ const App = () => {
         <Route path="/Noticias/:id" element={<Noticia />} />
         <Route path="/Viloes" element={<Villans />} />
         <Route path="/Viloes/:id" element={<Villian />} />
+        <Route path="/HQs" element={<HQs />} />
+        <Route path="/HQs/:id" element={<HQ />} />
       </Routes>
 
       {/* Exibir LeiaMais apenas na página de Notícias */}

@@ -2,10 +2,12 @@ import React from "react";
 import ItemList from "./ItemList";
 import ItemListJogos from "./ItemListJogos";
 import ItemListNoticias from "./ItemListNoticias";
+import ItemListHQ from "./ItemListHQ";
 import { heroesArray } from "../assets/database/heroes";
 import { jogosArray } from "../assets/database/games";
 import { newsArray } from "../assets/database/news";
 import { villainsArray } from "../assets/database/villains";
+import { hqArray } from "../assets/database/hq";
 
 
 const Main = ({ type }) => {
@@ -51,6 +53,16 @@ const Main = ({ type }) => {
                     itemsArray={newsArray} 
                     path='/noticias' 
                     idPath="/Noticias"
+                />
+            ) : <></>}
+             {/* Item List de HQ */}
+             {type === "HQ" || type === undefined ? (
+                <ItemListHQ
+                    title="HQ" 
+                    items={hqArray.length} 
+                    itemsArray={hqArray} 
+                    path='/HQs' 
+                    idPath="/HQs"
                 />
             ) : <></>}
         </div>
