@@ -6,14 +6,14 @@ import logoDC from '../../logo/dc-logo.png';
 
 
 
-const SingleItemHQ = ({ id, name, image, banner, artist, idPath }) => { 
+const SingleItemFilmes = ({ id, name, image, banner, artist, idPath }) => { 
     return (
        
             <div className="container">
-                <div className="HQ-container">
-                    <div className="single-item-HQ__div-image">
-                        <div className="HQ">
-                            <img className="single-item-HQ__image" src={image} alt="Novo God of War" />  
+                <div className="Filmes-container">
+                    <div className="single-item-Filmes__div-image">
+                        <div className="Filmes">
+                            <img className="single-item-Filmes__image" src={image} alt="Novo God of War" />  
                             <Link to={`${idPath}/${id}`}>{name}</Link> 
                         </div>
                     </div>
@@ -24,4 +24,4 @@ const SingleItemHQ = ({ id, name, image, banner, artist, idPath }) => {
 }
 
 
-export default SingleItemHQ;
+export default SingleItemFilmes;

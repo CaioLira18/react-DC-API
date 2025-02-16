@@ -16,6 +16,7 @@ const Jogo = () => {
           <h2 className="text_nome"><strong>Ano de Lançamento:</strong> {jogo.ano_lancamento}</h2>
           <h2 className="text_nome">Platafromas: {jogo.plataforms}</h2>
           <h2 className="text_nome">Genero: {jogo.genero}</h2>
+          <h2 className="text_nome">Descrição: {jogo.descricao}</h2>
           <h1 className="text_title">Desenvolvedora:</h1>
           <img className="logo_empresa" src={jogo.desenvolvedora_icon} alt="" />
         </div>

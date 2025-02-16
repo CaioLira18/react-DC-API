@@ -2,12 +2,15 @@ import React from "react";
 import ItemList from "./ItemList";
 import ItemListJogos from "./ItemListJogos";
 import ItemListNoticias from "./ItemListNoticias";
+import ItemListDcStudios from "./ItemListDcStudios";
 import ItemListHQ from "./ItemListHQ";
 import { heroesArray } from "../assets/database/heroes";
 import { jogosArray } from "../assets/database/games";
 import { newsArray } from "../assets/database/news";
 import { villainsArray } from "../assets/database/villains";
 import { hqArray } from "../assets/database/hq";
+import { filmesArray } from "../assets/database/filmes";
+import DC_Studios from "./DC_Studios";
 
 
 const Main = ({ type }) => {
@@ -65,6 +68,18 @@ const Main = ({ type }) => {
                     idPath="/HQs"
                 />
             ) : <></>}
+
+            <DC_Studios />
+             {/* Item List de Filmes */}
+             {type === "Filmes" || type === undefined ? (
+                <ItemListDcStudios     
+                    items={filmesArray.length} 
+                    itemsArray={filmesArray} 
+                    path='/Filmes' 
+                    idPath="/Filmes"
+                />
+            ) : <></>}
+
         </div>
     );
 };

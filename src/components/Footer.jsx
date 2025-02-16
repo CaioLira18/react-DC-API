@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoDC  from '../assets/logo/dc-logo-white.png';
-import logoWarner from '../assets/logo/warner-white.png'
+import logoDC  from '../../logo/dc-logo-white.png';
+import logoWarner from '../../logo/warner-white.png'
 
 
 const Footer = () => {

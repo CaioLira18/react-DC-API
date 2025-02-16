@@ -14,6 +14,8 @@ import Villans from './pages/Villans';
 import Villian from './pages/Villian';
 import HQ from './pages/HQ';
 import HQs from './pages/HQs';
+import Filme from './pages/Filme';
+import Filmes from './pages/Filmes';
 
 const App = () => {
   const location = useLocation(); // Pegando a rota atual
@@ -33,8 +35,11 @@ const App = () => {
         <Route path="/Viloes/:id" element={<Villian />} />
         <Route path="/HQs" element={<HQs />} />
         <Route path="/HQs/:id" element={<HQ />} />
-      </Routes>
+        <Route path="/Filmes" element={<Filmes />} />
+        <Route path="/Filmes/:id" element={<Filme />} />
 
+      </Routes>
+    
       {/* Exibir LeiaMais apenas na página de Notícias */}
       {location.pathname.startsWith("/Noticias") && <LeiaMais />}
 

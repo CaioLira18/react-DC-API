@@ -2,7 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons/faCirclePlay";
 import { Link } from "react-router-dom";
-import logoDC from '../assets/logo/dc-logo.png';
+import logoDC from '../../logo/dc-logo.png';
 
 
 const SingleItemJogos = ({ id, name, image, banner, artist, idPath }) => {

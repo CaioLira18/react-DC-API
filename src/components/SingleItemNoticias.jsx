@@ -2,7 +2,6 @@ import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons/faCirclePlay";
 import { Link, useParams } from "react-router-dom";
-import logoDC from '../assets/logo/dc-logo.png';
 import { newsArray } from "../assets/database/news";
 
 
