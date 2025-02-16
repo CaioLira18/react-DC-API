@@ -1103,6 +1103,13 @@ footer {
     padding: 8px;
   }
 
+  .item-list-jogos__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Forces exactly 2 columns */
+    gap: 12px;
+    padding: 8px;
+  }
+
   .item-list__header {
     flex-direction: column;
     gap: 10px;
