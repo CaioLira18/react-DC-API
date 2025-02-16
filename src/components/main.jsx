@@ -11,9 +11,12 @@ import { villainsArray } from "../assets/database/villains";
 import { hqArray } from "../assets/database/hq";
 import { filmesArray } from "../assets/database/filmes";
 import DC_Studios from "./DC_Studios";
-
+import { Link, useLocation } from "react-router-dom";
 
 const Main = ({ type }) => {
+    const location = useLocation();
+    const isHome = location.pathname === "/" || location.pathname === "";
+
     return (
         <div className="main">
             {/* Item List de Heróis  */}
@@ -69,7 +72,8 @@ const Main = ({ type }) => {
                 />
             ) : <></>}
 
-            <DC_Studios />
+            {isHome && <DC_Studios />}
+
              {/* Item List de Filmes */}
              {type === "Filmes" || type === undefined ? (
                 <ItemListDcStudios     
@@ -79,7 +83,6 @@ const Main = ({ type }) => {
                     idPath="/Filmes"
                 />
             ) : <></>}
-
         </div>
     );
 };
