@@ -55,7 +55,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 <img src="/photos/Home3.png" alt="Homepage" width="600"/>
 
 ### 📰 Notice Section  
-<img src="/photos/2.png" alt="Notice Section 1" width="600"/>
 <img src="/photos/3.png" alt="Notice Section 2" width="600"/>
 
 ### 🎮 Games Section  
