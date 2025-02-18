@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoDC  from '../../logo/dc-logo-white.png';
 import logoDcStudios from '../../logo/dc_studios.png'
 
 
