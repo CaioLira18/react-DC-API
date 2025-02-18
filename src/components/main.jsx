@@ -41,7 +41,7 @@ const Main = ({ type }) => {
             ) : <></>}
 
             {/* Item List de Jogos */}
-            {type === "Jogos" || type === undefined ? (
+            {type ==="Jogos" || type === undefined ? (
                 <ItemListJogos 
                     title="Jogos" 
                     items={jogosArray.length} 
