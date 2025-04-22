@@ -46,7 +46,7 @@ const Header = (handleLogout) => {
     return (
     <div className="header">
         <Link to="/">
-        <img src={logoDC} alt="Logo do Spotify" />
+        <img src={logoDC} alt="" />
         </Link>
 
         <ul>

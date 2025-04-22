@@ -382,6 +382,66 @@ img {
   line-height: 1.6;
 }
 
+.Field{
+  width: 50px;
+}
+
+.profile-info-edit {
+  display: flex;
+}
+
+.profile-info-edit {
+  background-color: rgb(99, 125, 180);
+  border-radius: 15px;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-field-edit {
+  width: 20%;
+  padding: 12px 10px 12px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.btn-logout-edit {
+  background-color: #f44336;
+  width: 20%;
+  color: white;
+}
+
+.login-button-edit {
+  width: 20%;
+  background-color: #3039e9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.btn-profile-edit{
+  margin-left: 10px;
+  background-color: transparent;
+  transition: 0.s all ease-in-out;
+}
+
+.btn-profile-edit:hover{
+  color: #2a528f;
+}
+
 
 /* Main */
 .main {
