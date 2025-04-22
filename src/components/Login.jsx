@@ -35,6 +35,7 @@ const Login = () => {
         localStorage.setItem("user", JSON.stringify(loggedUser));
         setUser(loggedUser);
         alert(response.data.msg);
+        localStorage.setItem("token", response.data.token);
       } else {
         alert(response.data.msg || "Erro ao fazer login");
       }

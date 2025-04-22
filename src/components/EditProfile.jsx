@@ -3,7 +3,6 @@ import { User, Edit } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
-import Profile from "./Profile";
 
 
 const EditProfile = () => {
@@ -11,6 +10,8 @@ const EditProfile = () => {
     // Estados para armazenar as informações do usuário
         const [userEmail, setUserEmail] = useState("");
         const [isAuthenticated, setIsAuthenticated] = useState(false);
+        const API_URL = import.meta.env.VITE_API_URL || "https://testserver-production-eca2.up.railway.app";
+
         
         // useEffect para carregar os dados do usuário do localStorage quando o componente montar
         useEffect(() => {
@@ -51,12 +52,27 @@ const EditProfile = () => {
         });
 
         const handleUpdateEmail = async (values) => {
+            const token = localStorage.getItem("token"); // <- pega o token salvo
+            if (!token) {
+              alert("Você não está autenticado.");
+              return;
+            }
+          
             try {
-              const response = await Axios.post(`${API_URL}/update-email`, values);
+              const response = await Axios.post(
+                `${API_URL}/update-email`,
+                values,
+                {
+                  headers: {
+                    Authorization: `Bearer ${token}`
+                  }
+                }
+              );
+          
               if (response.data.success) {
                 const updatedUser = { email: values.newEmail, authenticated: true };
                 localStorage.setItem("user", JSON.stringify(updatedUser));
-                setUser(updatedUser);
+                setUserEmail(values.newEmail);
                 alert(response.data.msg);
               } else {
                 alert(response.data.msg || "Erro ao atualizar o e-mail");
@@ -65,10 +81,11 @@ const EditProfile = () => {
               console.error("Erro ao atualizar o e-mail:", error);
               alert("Erro ao atualizar o e-mail: " + (error.response?.data?.msg || error.message));
             }
-          };
+        
+        };
           
-        
-        
+          
+           
     return (
         <div className="profile-container">
             <div className="profile-header">
@@ -86,17 +103,36 @@ const EditProfile = () => {
                 <h3>Detalhes da Conta</h3>
                 <p>Bem-vindo ao seu perfil, {userEmail.split('@')[0]}!</p>
                 <p>Aqui você pode gerenciar suas informações e preferências.</p>
-                <Formik initialValues={{ email: "", password: "" }} onSubmit={handleUpdateEmail} validationSchema={validationLogin}>
-                              <Form className="login-form">
-                                <div className="login-form-group">
-                                  <i className="fas fa-envelope"></i>
-                                  <Field name="email" className="form-field-edit" placeholder={userEmail} />
-                                  <ErrorMessage component="span" name="email" className="form-error" />
-                                </div>
-                    
-                                <button className="login-button-edit" type="submit">ALTERAR</button>
-                              </Form>
+                <Formik
+                initialValues={{ email: userEmail, newEmail: "", password: ""  }}
+                onSubmit={handleUpdateEmail}
+                validationSchema={validationLogin}
+                >
+                <Form className="login-form">
+                    <div className="login-form-group">
+                    <Field
+                        name="newEmail"
+                        className="form-field-edit"
+                        placeholder={userEmail}
+                    />
+                    <ErrorMessage component="span" name="newEmail" className="form-error" />
+                    </div>
+
+                    <div className="login-form-group">
+                    <Field
+                        type="password"
+                        name="password"
+                        className="form-field-edit"
+                        placeholder="Senha"
+                    />
+                    <ErrorMessage component="span" name="password" className="form-error" />
+                    </div>
+
+                    <button className="login-button-edit" type="submit">ALTERAR</button>
+                </Form>
                 </Formik>
+
+
              
                 <div className="profile-actions">
                     <button
