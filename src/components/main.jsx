@@ -72,8 +72,8 @@ const Main = ({ type }) => {
                 />
             ) : <></>}
 
-            {isHome && <DC_Studios />}
-
+            
+             {isHome && <DC_Studios/>}
              {/* Item List de Filmes */}
              {type === "Filmes" || type === undefined ? (
                 <ItemListDcStudios     

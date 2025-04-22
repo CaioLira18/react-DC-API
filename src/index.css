@@ -28,6 +28,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
 }
 
 body {
@@ -40,9 +42,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 img {
   max-width: 100%;
@@ -63,30 +62,328 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
-  padding: 8px 20px;
+  padding: 0px 20px;
+  max-height: 100px;
 }
 
 .header img {
-  width: 100px;
-  padding: 0;
+  display: flex;
+  width: 60px;
+  padding: 0; 
+  align-items: center;
+  justify-content: center;
+}
+
+.header ul  {
+  display: inline-flex;
+  padding: 20px;
+  margin: 20px;
+  
+}
+
+.header ul li {
+  display: flex;
+  margin: 20px;
+}
+
+/* Botões */
+.profile-actions {
+  display: flex;
+  gap: 15px;
   margin-top: 20px;
 }
 
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-logout {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-logout:hover {
+  background-color: #d32f2f;
+}
+
+.btn-edit {
+  background-color: #8c0eb7;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #7a0c9e;
+}
+
+/* Página não autenticada */
+.not-authenticated {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.not-authenticated h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.not-authenticated p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.login-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #3039e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-link:hover {
+  background-color: #1d0c9e;
+}
+
+/* CTA */
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.user-section {
+  display: flex; 
+}
 
 
+/* Login */
 
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #2a528f, #08094b);
+}
 
+.login-box {
+  background-color: rgba(11, 59, 121, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+.user-icon {
+  background-color: #6465b4;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.user-icon i {
+  font-size: 30px;
+  color: white;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-group {
+  position: relative;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-form-group i {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: #777;
+}
+
+.form-field {
+  width: 100%;
+  padding: 12px 10px 12px 35px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-field::placeholder {
+  color: #999;
+}
+
+.form-error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.forgot-link {
+  color: white;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: #3039e9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.login-button:hover {
+  background-color: #1d0c9e;
+}
+
+.register-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #3039e9;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.register-text h2{
+  color: white;
+}
+
+.register-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#register-form {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+}
+
+/* Profile */
+.profile-container {
+  width: 100%;
+  height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #2a528f, #08094b);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Cabeçalho do perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.profile-avatar {
+  background-color: #272a5d;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Detalhes do perfil */
+.profile-details {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.profile-details h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.profile-details h4 {
+  font-size: 18px;
+  margin: 20px 0 15px;
+}
+
+.profile-details p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
 
 /* Main */
-
 .main {
   margin: 0 10px 10px;
   padding: 20px;
@@ -445,9 +742,7 @@ footer {
   width: 100%;
 }
 
-.footer {
-  margin-top: 40px;
-}
+
 
 .footer-content p {
   margin: 10px ;
@@ -817,7 +1112,14 @@ footer {
 }
 
 /* DC Studios */
-.header .dc_studios_logo {
+.dc_studios_logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.dc_studios_logo img{
   width: 200px;
 }
 

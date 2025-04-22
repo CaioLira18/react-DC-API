@@ -5,9 +5,9 @@ import logoDcStudios from '../../logo/dc_studios.png'
 
 const DC_Studios = () => {
     return (
-        <div className="header">
+        <div className="dc_studios_logo">
             <Link to="/">
-                <img className="dc_studios_logo" src={logoDcStudios} alt="Logo do Spotify" />
+                <img src={logoDcStudios} alt="Logo da DC" />
             </Link>
         </div> 
     );

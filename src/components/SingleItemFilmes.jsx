@@ -13,7 +13,7 @@ const SingleItemFilmes = ({ id, name, image, banner, artist, idPath }) => {
                 <div className="Filmes-container">
                     <div className="single-item-Filmes__div-image">
                         <div className="Filmes">
-                            <img className="single-item-Filmes__image" src={image} alt="Novo God of War" />  
+                            <img className="single-item-Filmes__image" src={image} alt="" />  
                             <Link to={`${idPath}/${id}`}>{name}</Link> 
                         </div>
                     </div>

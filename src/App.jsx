@@ -16,6 +16,9 @@ import HQ from './pages/HQ';
 import HQs from './pages/HQs';
 import Filme from './pages/Filme';
 import Filmes from './pages/Filmes';
+import Profile from './components/Profile';
+import Login from './components/Login';
+import EditProfile from './components/EditProfile';
 
 const App = () => {
   const location = useLocation(); // Pegando a rota atual
@@ -33,7 +36,10 @@ const App = () => {
         <Route path="/Noticias/:id" element={<Noticia />} />
         <Route path="/Viloes" element={<Villans />} />
         <Route path="/Viloes/:id" element={<Villian />} />
+        <Route path="/Profile" element={<Profile />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/HQs" element={<HQs />} />
+        <Route path="/EditarPerfil" element={<EditProfile />} />
         <Route path="/HQs/:id" element={<HQ />} />
         <Route path="/Filmes" element={<Filmes />} />
         <Route path="/Filmes/:id" element={<Filme />} />
