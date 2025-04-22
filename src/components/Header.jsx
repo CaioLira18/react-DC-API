@@ -55,8 +55,9 @@ const Header = () => {
                 <li><a href="/">Home</a></li>
                 <li><a href="/Herois">Heróis</a></li>
                 <li><a href="/Viloes">Vilões</a></li>
-                <li><a href="/">DC Studios</a></li>
-                <li><a href="/">HQs</a></li> 
+                <li><a href="/Filmes">DC Studios</a></li>
+                <li><a href="/Noticias">Noticias</a></li>
+                <li><a href="/HQs">HQs</a></li> 
 
                 {!isAuthenticated ? (
                     <a className="cta" href="/Profile">
