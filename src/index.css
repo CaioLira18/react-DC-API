@@ -1344,6 +1344,144 @@ footer {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* Bilioteca de HQs */
+/* Improved layout CSS */
+
+.page-wrapper {
+  min-height: calc(100vh - 50px); /* Adjust based on your header height */
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  flex: 0 0 auto;
+  padding: 2rem;
+}
+
+.biblioteca-section {
+  flex: 1 0 auto;
+  padding: 0 2rem;
+}
+
+.spacing-before-footer {
+  height: 4rem; /* Adjust based on your needs */
+}
+
+/* Rest of the biblioteca styles remain the same */
+.biblioteca {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.biblioteca h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.library-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.library-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 400px;
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.library-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.library-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.library-item-info {
+  padding: 1rem;
+}
+
+.library-item-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.library-item-info p {
+  margin: 0.3rem 0;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .library-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .library-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .profile-container,
+  .biblioteca-section {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .library-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-container,
+  .biblioteca-section {
+    padding: 0 1rem;
+  }
+  
+  .profile-details {
+    padding: 1rem;
+  }
+  
+  .library-item img {
+    height: 180px;
+  }
+}
+
+.btn-view {
+  display: block;
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-view:hover {
+  background-color: #2980b9;
+}
 
 /* Player */
 

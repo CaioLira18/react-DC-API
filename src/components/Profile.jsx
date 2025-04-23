@@ -7,6 +7,7 @@ const Profile = () => {
     // Estados para armazenar as informações do usuário
     const [userEmail, setUserEmail] = useState("");
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [userLibrary, setUserLibrary] = useState([]);
     
     // useEffect para carregar os dados do usuário do localStorage quando o componente montar
     useEffect(() => {
@@ -17,15 +18,28 @@ const Profile = () => {
                 setUserEmail(parsedUser.email || "");
                 setIsAuthenticated(parsedUser.authenticated || false);
                 console.log("Dados do usuário carregados:", parsedUser);
+                if (parsedUser.authenticated) {
+                    loadUserLibrary(parsedUser.email);
+                }
             } catch (error) {
                 console.error("Erro ao carregar dados do usuário:", error);
             }
         } else {
             console.log("Nenhum usuário encontrado no localStorage");
-            // Opcionalmente redirecionar para a página de login
-            // window.location.href = "/login";
         }
     }, []);
+
+    const loadUserLibrary = (email) => {
+        try {
+            const libraryData = JSON.parse(localStorage.getItem("userLibrary")) || {};
+            const userHQs = libraryData[email] || [];
+            setUserLibrary(userHQs);
+            console.log("Biblioteca carregada:", userHQs);
+        } catch (error) {
+            console.error("Erro ao carregar biblioteca de HQs:", error);
+            setUserLibrary([]);
+        }
+    };
     
     // Se não houver usuário autenticado, mostrar uma mensagem
     if (!isAuthenticated) {
@@ -74,6 +88,31 @@ const Profile = () => {
                     </Link>
                 </div>
             </div>
+            
+            <div className="biblioteca">
+                <h1>Sua Biblioteca de HQs</h1>
+                
+                {userLibrary.length === 0 ? (
+                    <p>Você ainda não adicionou nenhuma HQ à sua biblioteca.</p>
+                ) : (
+                    <div className="library-grid">
+                        {userLibrary.map((hq) => (
+                            <div key={hq.id} className="library-item">
+                                <img src={hq.image} alt={hq.name} />
+                                <div className="library-item-info">
+                                    <h3>{hq.name}</h3>
+                                    <p>Autor: {hq.autor}</p>
+                                    <p>Ano: {hq.ano_lancamento}</p>
+                                    <Link to={`/hq/${hq.id}`} className="btn btn-view">
+                                        Ver HQ
+                                    </Link>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+            
         </div>
     );
 };
