@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logoDC from '../../logo/dc-logo.png';
 import { User, LogOut } from 'lucide-react';
+import mulherMaravilha from '../../imagens_herois/MulherMaravilha.png';
+
 
 const Header = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -40,6 +42,8 @@ const Header = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("token"); // Remover o token
+        localStorage.removeItem("user");
+        window.location.href = "/";
         setIsAuthenticated(false); // Atualizar o estado local
         setUserEmail(""); // Limpar o e-mail do usuário
         navigate("/"); // Redirecionar para a página inicial sem recarregar
@@ -67,15 +71,19 @@ const Header = () => {
                 ) : (
                     <div className="user-section">
                         <a className="cta" href="/Profile">
-                            <User />
+                            <div className="image-profile">
+                                <img src={mulherMaravilha} alt="" />
+                            </div>
                             <span>{userEmail.split('@')[0]}</span>
                         </a>
                         <button
                             className="cta logout-btn"
                             onClick={handleLogout}>
+                            
+
                             <hr />
                             <LogOut />
-                            <span>Sair</span>  
+                            <span>Sair</span>
                         </button>
                     </div>
                 )}

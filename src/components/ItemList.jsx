@@ -6,14 +6,17 @@ import { Link } from 'react-router-dom';
 
 const ItemList = ({ title, items, itemsArray, path, idPath }) => {
     // console.log(title);
-
+    const isHome = location.pathname === "/" || location.pathname === "";
     return (
     <div className="item-list">
         <div className="item-list-header">
-            <div className="main__texts">
+        <div className="main__texts">
             <h2>{title} Populares</h2>
-            <Link to={idPath} className="main__link">Mostrar Tudo</Link>
-            </div>    
+            {isHome && (
+                <Link to={idPath} className="main__link">Mostrar Tudo</Link>
+            )}
+        </div>
+    
         </div>
         <div className="item-list__container">
             {itemsArray.filter((currentValue, index) => index < items).map((currObj, index) => 

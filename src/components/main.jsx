@@ -19,6 +19,7 @@ const Main = ({ type }) => {
 
     return (
         <div className="main">
+            {isHome}
             {/* Item List de Heróis  */}
             {type === "Heróis" || type === undefined ? (
                 <ItemList 
@@ -29,6 +30,8 @@ const Main = ({ type }) => {
                     idPath="/Herois"
                 />
             ) : <></>}
+
+            {isHome}
             {/* Item List de Vilões */}
             {type === "viloes" || type === undefined ? (
                 <ItemList 
@@ -40,6 +43,7 @@ const Main = ({ type }) => {
                 />
             ) : <></>}
 
+            {isHome}
             {/* Item List de Jogos */}
             {type ==="Jogos" || type === undefined ? (
                 <ItemListJogos 
@@ -51,6 +55,7 @@ const Main = ({ type }) => {
                 />
             ) : <></>}
 
+            {isHome}
             {/* Item List de Notícias */}
             {type === "Notícias" || type === undefined ? (
                 <ItemListNoticias 
@@ -61,6 +66,7 @@ const Main = ({ type }) => {
                     idPath="/Noticias"
                 />
             ) : <></>}
+            {isHome}
              {/* Item List de HQ */}
              {type === "HQ" || type === undefined ? (
                 <ItemListHQ

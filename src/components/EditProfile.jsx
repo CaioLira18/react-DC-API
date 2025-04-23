@@ -3,6 +3,7 @@ import { User, Edit } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
+import mulherMaravilha from '../../imagens_herois/MulherMaravilha.png';
 
 
 const EditProfile = () => {
@@ -89,8 +90,8 @@ const EditProfile = () => {
     return (
         <div className="profile-container">
             <div className="profile-header">
-                <div className="profile-avatar">
-                    <User size={50} color="white" />
+                <div className="image-profile-edit">
+                    <a href="/AvatarChoice"><img src={mulherMaravilha} alt="" /></a>
                 </div>
                 <div className="profile-info">
                     <h2>Perfil do Usuário</h2>

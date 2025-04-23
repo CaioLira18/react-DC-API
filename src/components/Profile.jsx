@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { User } from "lucide-react";
 import { Link } from "react-router-dom";
+import mulherMaravilha from '../../imagens_herois/MulherMaravilha.png';
 
 const Profile = () => {
     // Estados para armazenar as informações do usuário
@@ -43,8 +44,8 @@ const Profile = () => {
     return (
         <div className="profile-container">
             <div className="profile-header">
-                <div className="profile-avatar">
-                    <User size={50} color="white" />
+                <div className="image-profile-edit">
+                    <img src={mulherMaravilha} alt="" />
                 </div>
                 <div className="profile-info">
                     <h2>Perfil do Usuário</h2>

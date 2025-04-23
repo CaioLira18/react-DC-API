@@ -6,7 +6,6 @@ import Hero from './pages/Hero';
 import Footer from './components/Footer';
 import Heroes from './pages/Heroes';
 import Jogos from './pages/Jogos'; // Corrigido
-import LeiaMais from './components/LeiaMais';
 import Noticias from './pages/Noticias'; // Corrigido
 import Noticia from './pages/Noticia';
 import Jogo from './pages/Jogo';
@@ -19,6 +18,7 @@ import Filmes from './pages/Filmes';
 import Profile from './components/Profile';
 import Login from './components/Login';
 import EditProfile from './components/EditProfile';
+import AvatarChoice from './pages/AvatarChoice';
 
 const App = () => {
   const location = useLocation(); // Pegando a rota atual
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Herois" element={<Heroes />} />
         <Route path="/Herois/:id" element={<Hero />} />
-        <Route path="/Jogos" element={<Jogos />} /> {/* Corrigido */}
+        <Route path="/Jogos" element={<Jogos />} /> 
         <Route path="/Jogos/:id" element={<Jogo />} />
         <Route path="/Noticias" element={<Noticias />} />
         <Route path="/Noticias/:id" element={<Noticia />} />
@@ -38,16 +38,14 @@ const App = () => {
         <Route path="/Viloes/:id" element={<Villian />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/AvatarChoice" element={<AvatarChoice />} />
         <Route path="/HQs" element={<HQs />} />
         <Route path="/EditarPerfil" element={<EditProfile />} />
         <Route path="/HQs/:id" element={<HQ />} />
         <Route path="/Filmes" element={<Filmes />} />
         <Route path="/Filmes/:id" element={<Filme />} />
-
       </Routes>
-    
-      {/* Exibir LeiaMais apenas na página de Notícias */}
-      {location.pathname.startsWith("/Noticias") && <LeiaMais />}
+  
 
       <Footer />
     </div>
